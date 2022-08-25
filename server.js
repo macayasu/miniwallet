@@ -16,7 +16,7 @@ var cors = require("cors");
 
 app.use(cors()); // Use this after the variable declaration
 const walletRoutes = require("./src/routes/wallet.routes");
-app.use("/api/v1/wallet", walletRoutes);
+app.use("/api/v1/", walletRoutes);
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });

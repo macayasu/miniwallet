@@ -5,14 +5,14 @@ const walletController = require("../controllers/wallet.controller");
 // Init wallet
 router.post("/init", walletController.init);
 // Enable a wallet
-router.post("/", walletController.enable);
+router.post("/wallet", walletController.enable);
 // Deposits a wallet
-router.post("/deposits", walletController.deposit);
+router.post("/wallet/deposits", walletController.deposit);
 // Withdraw a wallet
-router.post("/withdrawals", walletController.withdraw);
+router.post("/wallet/withdrawals", walletController.withdraw);
 // Show all wallet
-router.get("/", walletController.myWallet);
+router.get("/wallet", walletController.myWallet);
 // Update a wallet with token
-router.patch("/", walletController.disableWallet);
+router.patch("/wallet", walletController.disableWallet);
 
 module.exports = router;
